@@ -15,6 +15,7 @@ jobs:
         uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
           FOLDER: 'data'      #directory to generate index
+          EXCLUDE: '*.files'  # exclude all folders that end with .files
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
