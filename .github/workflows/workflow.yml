@@ -21,7 +21,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: 'data'      # upload generated folder
-  
+          EXCLUDE: '*.files'  # exclude all folders that end with .files
+
   deploy:
     needs: pages-directory-listing
     permissions:
